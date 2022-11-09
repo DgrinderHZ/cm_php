@@ -45,8 +45,8 @@
 	echo 5 === '5';
 	echo 5 === 5;
 
-	//echo true == 1;
-	//echo true === 1;
+	echo true == 1;
+	echo true === 1;
 	
 ?>
 </body>
