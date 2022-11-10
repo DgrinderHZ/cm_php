@@ -42,7 +42,16 @@
         $a = 34;
         echo "<br>" . $a . "<br>"; 
 
+        $a = "une variable en PHP";
+        if(isset($a)) echo "la variable a existe";
+        unset($a);
+        echo "la variable a a été supprimée ....";
+        if(!isset($a)) echo "la variable n'existe pas";
 
+        $a = "";
+        if (!empty($a)) echo " La variable existe et elle n\'est pas vide !";
+        else 
+        echo "khawi"
 
     ?>
     </h1>
