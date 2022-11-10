@@ -54,6 +54,16 @@
 	echo 'the ninja scream \'whaaa\'<br>';
 	echo 'the ninja screamed "whaaa"<br>';
 	echo "the ninja scream 'whaaa'<br>";
+
+
+	#########################
+	#########################
+	$var="Hello PHP";
+	$machaine="le contenu de \$var est $var<br>";
+	echo $machaine;
+	//ou avec des ' ':
+	$mystring='le contenu de $var est '.$var;
+	echo $mystring;
 	?>
 	</p>
 
