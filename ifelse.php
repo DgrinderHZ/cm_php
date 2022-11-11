@@ -67,7 +67,7 @@
 			break;
 		
 		default:
-			echo "Numero unvalide.". RETOUR_A_LA_LIGNE;
+			echo "Numero invalide.". RETOUR_A_LA_LIGNE;
 	}
 	?>
 

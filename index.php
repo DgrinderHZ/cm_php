@@ -17,6 +17,7 @@
             <li><a href="conditions.php">Condititions</a></li>
             <li><a href="var_globales.php">Les variable globales</a></li>
             <li><a href="ifelse.php">If Else</a></li>
+            <li><a href="lesboucles.php">Les boucles</a></li>
         </ul>
     </nav>
 </body>
