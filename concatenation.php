@@ -56,7 +56,7 @@
 	echo "the ninja scream 'whaaa'<br>";
 
 
-	#########################
+	#########################djfdj 
 	#########################
 	$var="Hello PHP";
 	$machaine="le contenu de \$var est $var<br>";
