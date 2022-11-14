@@ -33,8 +33,20 @@
     }
 
     // syntaxe 2 de declaration d'un tableau php
-    $les_noms = array("Hassan", "Salah", "Salah2", "Salah3", "abdo", "mimon", "Ismail", "Soufian");
- 
+    $les_noms = array("Hassan", "Salah", "abdo", "mimon", "Ismail", "Soufian");
+    
+    // Voir le contenu de tableau
+    print_r($les_noms);
+
+    // Ajouter un nouveau element au tableau
+    $les_noms[] = "nouveau";
+	array_push($les_noms, "nouveau2");
+
+	array_push($les_noms, "a supprimer");
+    print_r($les_noms);
+    // pour supprimer un elemen du tableau
+    echo "On a supprimé ' ". array_pop($les_noms) . " ' <br>";
+    
     // FIN CODE PHP
     ?>
 
