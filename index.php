@@ -19,6 +19,7 @@
             <li><a href="ifelse.php">If Else</a></li>
             <li><a href="lesboucles.php">Les boucles</a></li>
             <li><a href="form.php">Les etres</a></li>
+            <li><a href="tableau.php">Les tableaux</a></li>
         </ul>
     </nav>
 </body>
