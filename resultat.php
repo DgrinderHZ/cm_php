@@ -9,7 +9,14 @@
 <body>
     Bonjour, 
     <h1>
-        <?php echo $_POST['nom']; ?>.
+        <?php
+        define("RETOUR_A_LA_LIGNE", "<br>");
+
+        var_dump($_POST);
+        echo RETOUR_A_LA_LIGNE;
+        print_r($_POST);
+        echo RETOUR_A_LA_LIGNE;
+        echo $_POST['nom']; ?>.
         Tu as <?php echo (int)$_POST['age']; ?> ans.
 
     </h1>
