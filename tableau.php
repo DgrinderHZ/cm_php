@@ -33,12 +33,13 @@
     }
 
     // syntaxe 2 de declaration d'un tableau php
-    $les_noms = ["Hassan", "Salah", "Salah2", "Salah3", "abdo", "mimon", "Ismail", "Soufian"];
+    $les_noms = array("Hassan", "Salah", "Salah2", "Salah3", "abdo", "mimon", "Ismail", "Soufian");
  
     // FIN CODE PHP
     ?>
 
     <br><hr>
+
     <table>
         <tr>
             <th>Numero</th>
@@ -46,8 +47,10 @@
         </tr>
         <?php
             for ($i=0; $i < count($les_noms); $i++) { 
-                echo "<tr><td>$i</td>";
-                echo "<td>$les_noms[$i]</td></tr>";
+                echo "<tr>";
+                echo "    <td>$i</td>";
+                echo "    <td>$les_noms[$i]</td>";
+                echo "</tr>";
             }
         ?>
     </table>
