@@ -7,9 +7,8 @@
     <title>Serie 1</title>
 </head>
 <body>
-    <nav>
-        <li><a href="../../index.php">Home</a></li>
-    </nav>
+   <?php include_once("retour.php"); ?>
+
 
     <?php
 

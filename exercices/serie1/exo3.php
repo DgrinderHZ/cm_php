@@ -12,9 +12,8 @@
     </style>
 </head>
 <body>
-     <nav>
-        <li><a href="../../index.php">Home</a></li>
-    </nav>
+        <?php include_once("retour.php"); ?>
+
         <h1>Facteur:</h1>
     <?php
         $produits = [
