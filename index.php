@@ -20,6 +20,7 @@
             <li><a href="lesboucles.php">Les boucles</a></li>
             <li><a href="form.php">Les etres</a></li>
             <li><a href="tableau.php">Les tableaux</a></li>
+            <li><a href="fonctions.php">Les fonctions</a></li>
             <li><a href="exercices/serie1/exo1.php">Serie1 exo1</a></li>
             <li><a href="exercices/serie1/exo2.php">Serie1 exo2</a></li>
             <li><a href="exercices/serie1/exo3.php">Serie1 exo3</a></li>
