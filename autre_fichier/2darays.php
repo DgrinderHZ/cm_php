@@ -10,7 +10,7 @@
 
 	//print_r($blogs);
 	//print_r($blogs[2]);
-	//echo $blogs[1]['title'];
+	echo $blogs[1]['title'];
 	//echo count($blogs);
 
 	$blogs[] = ['title' => 'castle party', 'author' => 'peach', 'content' => 'lorem'];

@@ -54,4 +54,21 @@
 
     
 </body>
+
+<br><hr>
+
+    <table>
+        <tr>
+            <th>Etudiant</th>
+            <th>Note</th>
+        </tr>
+        <?php
+            foreach($les_noms as $nom => $note) { 
+                echo "<tr>";
+                echo "    <td>$nom</td>";
+                echo "    <td>$note</td>";
+                echo "</tr>";
+            }
+        ?>
+    </table>
 </html>
