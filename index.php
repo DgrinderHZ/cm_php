@@ -24,6 +24,7 @@
             <li><a href="exercices/serie1/exo1.php">Serie1 exo1</a></li>
             <li><a href="exercices/serie1/exo2.php">Serie1 exo2</a></li>
             <li><a href="exercices/serie1/exo3.php">Serie1 exo3</a></li>
+            <li><a href="testclasses.php">Les classes/objets</a></li>
         </ul>
     </nav>
 </body>
