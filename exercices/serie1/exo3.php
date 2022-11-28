@@ -13,7 +13,26 @@
 </head>
 <body>
         <?php include_once("retour.php"); ?>
+        <?php 
+            function prixTTC($prix, $tva){
+                $resultat = $prix + $prix * $tva;
+                return $resultat;
+            }
+            function prixTotTTC($prixTtc, $qte){
+                $resultat = $prixTtc * $qte;
+                return $resultat;
+            }
 
+            function totalTtc($produits){
+                $total = 0;
+                for ($i=0; $i < count($produits); $i++) { 
+                    $prix_ttc = prixTTC($produits[$i]["prix"], $produits[$i]["tva"]);
+                    $tot_ttc = prixTotTTC($prix_ttc, $produits[$i]["qte"]);
+                    $total += $tot_ttc;
+                }
+                return $total;
+            }
+        ?>
         <h1>Facteur:</h1>
     <?php
         $produits = [
@@ -34,9 +53,9 @@
         <?php
         $total = 0;
         for ($i=0; $i < count($produits); $i++) { 
-            $prix = $produits[$i]["prix"];
-            $tot_ttc = ($prix + $prix * $produits[$i]["tva"])*$produits[$i]["qte"];
-            $total += $tot_ttc;
+            $prix_ttc = prixTTC($produits[$i]["prix"], $produits[$i]["tva"]);
+            $tot_ttc = prixTotTTC($prix_ttc, $produits[$i]["qte"]);
+    
             echo "<tr>";
             foreach($produits[$i] as $key => $val) { 
                 echo "<td>$val</td>";
@@ -45,7 +64,7 @@
             echo "</tr>";
         }
         echo "<tr></tr>";
-        echo "<tr><td>Total TTC:</td> <td>$total</td></tr>";
+        echo "<tr><td>Total TTC:</td> <td>". totalTtc($produits) ."</td></tr>";
         ?>
     </table>
 </body>
