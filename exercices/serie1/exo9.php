@@ -25,9 +25,12 @@ function conversionTab($t){
     $n = count($t);
     for($i=0; $i<$n; $i++) $t[$i] = conversion($t[$i]);
 
-    afficheTab($t);
-    echo "La somme est : ". sommeTab($t) . "<br>";
+    afficherTab($t);
+    echo "La somme est : ". sommeTab($t) . "euros<br>";
 }
 
 $tab = array(20, 10, 100, 200);
+echo "Tableau en Dirham:<br>";
+afficherTab($tab);
+echo "Tableau en Euros:<br>";
 conversionTab($tab);
