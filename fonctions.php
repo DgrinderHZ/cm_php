@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Functions</title>
 </head>
 <body>
     <nav>
@@ -20,6 +20,8 @@
     // appells
     bonjour();
     bonjour();
+    bonjour();
+    bonjour();
 
     // 2. les fonctions avec parametres et sans valeur de retour
     // definition
@@ -27,7 +29,7 @@
          // Affichage
          $taille = count($tab);
         for ($i=0; $i < $taille; $i++) { 
-            echo $tab[$i] . " | ";
+            echo " | " . $tab[$i] . " | ";
         }
         echo "<br>";
     }
