@@ -12,36 +12,36 @@
     </style>
 </head>
 <body>
-        <?php include_once("retour.php"); ?>
+        <?php 
+        include_once("retour.php"); 
+        // inclusion
+        spl_autoload_register(function ($class_name) {
+            include "Produit.php";
+        });
+        ?>
 
         <h1>Facteur:</h1>
     <?php
         $produits = [
-            ["nom"=> "Iphone", "prix"=>10000, "tva"=> 0.25, "qte"=>2],
-            ["nom"=> "Ipad", "prix"=>15000, "tva"=> 0.20, "qte"=>1]
+            new Produit("Iphone", 10000, 0.25, 2),
+            new Produit("Ipad", 15000, 0.2, 1)
         ];
     ?>
 
     <table >
         <tr>
-            <?php 
-                foreach ($produits[0] as $key => $value) {
-                    echo "<th>$key</th>";
-                }
-            ?>
+            <th>Nom</th>
+            <th>Prix</th>
+            <th>TVA</th>
+            <th>Quantité</th>
             <th>Prix TTC Total</th>
         </tr>
         <?php
         $total = 0;
         for ($i=0; $i < count($produits); $i++) { 
-            $prix = $produits[$i]["prix"];
-            $tot_ttc = ($prix + $prix * $produits[$i]["tva"])*$produits[$i]["qte"];
-            $total += $tot_ttc;
+            $total += $produits[$i]->prixTotTTC();
             echo "<tr>";
-            foreach($produits[$i] as $key => $val) { 
-                echo "<td>$val</td>";
-            }
-            echo "<td>$tot_ttc</td>";
+            echo $produits[$i];
             echo "</tr>";
         }
         echo "<tr></tr>";

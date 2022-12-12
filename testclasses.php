@@ -11,6 +11,7 @@
         // inclusion
         spl_autoload_register(function ($class_name) {
             include "Etudiant.php";
+            include "Produit.php";
         });
 
         /* Test : */
@@ -25,6 +26,11 @@
         echo $etu->equals($etu2);
         echo "__ ". $etu2->getId() . "<br>";
         echo "__ ". $etu2;
+
+        echo "<hr>";
+        $pro = new Produit("POmada", 6, 0.2, 2);
+        
+        echo "__ ". $pro;
     ?>
 </body>
 </html>

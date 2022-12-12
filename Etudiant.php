@@ -13,6 +13,7 @@ class Etudiant{
         $this->nom = $nom; 
         $this->naissance= $naissance; 
     } 
+
     /**
     * Fonction de comparaison simplifiee entre etudiants
     * == comparera id, nom et naissance
