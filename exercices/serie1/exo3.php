@@ -32,6 +32,28 @@
                 }
                 return $total;
             }
+
+            function afficheTab($produits){
+                echo "<table><tr>";      
+                foreach ($produits[0] as $key => $value) {
+                    echo "<th>$key</th>";
+                } 
+                echo "<th>Prix TTC Total</th></tr>";
+                $total = 0;
+                for ($i=0; $i < count($produits); $i++) { 
+                    $prix_ttc = prixTTC($produits[$i]["prix"], $produits[$i]["tva"]);
+                    $tot_ttc = prixTotTTC($prix_ttc, $produits[$i]["qte"]);
+            
+                    echo "<tr>";
+                    foreach($produits[$i] as $key => $val) { 
+                        echo "<td>$val</td>";
+                    }
+                    echo "<td>$tot_ttc</td>";
+                    echo "</tr>";
+                }
+                echo "<tr></tr>";
+                echo "<tr><td>Total TTC:</td> <td>". totalTtc($produits) ."</td></tr></table>";
+            }
         ?>
         <h1>Facteur:</h1>
     <?php
@@ -39,33 +61,11 @@
             ["nom"=> "Iphone", "prix"=>10000, "tva"=> 0.25, "qte"=>2],
             ["nom"=> "Ipad", "prix"=>15000, "tva"=> 0.20, "qte"=>1]
         ];
+
+        // appel
+        afficheTab($produits);
     ?>
 
-    <table >
-        <tr>
-            <?php 
-                foreach ($produits[0] as $key => $value) {
-                    echo "<th>$key</th>";
-                }
-            ?>
-            <th>Prix TTC Total</th>
-        </tr>
-        <?php
-        $total = 0;
-        for ($i=0; $i < count($produits); $i++) { 
-            $prix_ttc = prixTTC($produits[$i]["prix"], $produits[$i]["tva"]);
-            $tot_ttc = prixTotTTC($prix_ttc, $produits[$i]["qte"]);
-    
-            echo "<tr>";
-            foreach($produits[$i] as $key => $val) { 
-                echo "<td>$val</td>";
-            }
-            echo "<td>$tot_ttc</td>";
-            echo "</tr>";
-        }
-        echo "<tr></tr>";
-        echo "<tr><td>Total TTC:</td> <td>". totalTtc($produits) ."</td></tr>";
-        ?>
-    </table>
+   
 </body>
 </html>
