@@ -34,3 +34,15 @@ echo "Tableau en Dirham:<br>";
 afficherTab($tab);
 echo "Tableau en Euros:<br>";
 conversionTab($tab);
+?>
+
+
+
+<?php
+    // Bloc 2 : code PHP
+?>
+<h1>HTML </h1>
+<?php
+    // Bloc 2 : code PHP
+?>
+
